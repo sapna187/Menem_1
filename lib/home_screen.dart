@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:menem/constants.dart';
 
+import 'add post/addpost1.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -69,7 +71,12 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               const SizedBox(width: 20),
               GestureDetector(
-                onTap: (){},
+                onTap: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => addpost1()),
+                  );
+                },
                 child: Image.asset("assets/images/add.jpeg", height: 30),
               ),
               const Spacer(),
@@ -114,7 +121,44 @@ class _HomeScreenState extends State<HomeScreen> {
             const Divider(thickness: 1, color: grey),
 
             post("assets/images/claudia.jpg", "Sapna", "assets/images/verified.jpeg", 22,
-                "  10 m", "assets/images/claudia.jpg", "7718", " 18 Kudos")
+                "  10 m", "assets/images/claudia.jpg", "7718", " 18 Kudos"),
+
+            const Divider(thickness: 1, color: grey),
+            post("assets/images/post3.jpg", "Sapna", "assets/images/verified.jpeg", 22,
+                "  10 m", "assets/images/post3.jpg", "7718", " 18 Kudos"),
+
+            const Divider(thickness: 1, color: grey),
+            post("assets/images/post2.jpg", "Sapna", "assets/images/verified.jpeg", 22,
+                "  10 m", "assets/images/post2.jpg", "7718", " 18 Kudos"),
+
+            const Divider(thickness: 1, color: grey),
+            post("assets/images/post1.jpg", "Sapna", "assets/images/verified.jpeg", 22,
+                "  10 m", "assets/images/post1.jpg.jpg", "7718", " 18 Kudos"),
+
+            const Divider(thickness: 1, color: grey),
+            post("assets/images/post5.jpg", "Sapna", "assets/images/verified.jpeg", 22,
+                "  10 m", "assets/images/post5.jpg", "7718", " 18 Kudos"),
+
+
+            const Divider(thickness: 1, color: grey),
+            post("assets/images/post6.jpg", "Sapna", "assets/images/verified.jpeg", 22,
+                "  10 m", "assets/images/post6.jpg", "7718", " 18 Kudos"),
+
+
+            const Divider(thickness: 1, color: grey),
+            post("assets/images/post7.jpg", "Developer", "assets/images/verified.jpeg", 22,
+                "  10 m", "assets/images/post7.jpg", "7718", " 18 Kudos"),
+
+
+            const Divider(thickness: 1, color: grey),
+            post("assets/images/post8.jpg", "Sonia", "assets/images/verified.jpeg", 22,
+                "  10 m", "assets/images/post8.jpg", "7718", " 18 Kudos"),
+
+
+
+
+
+
           ],
         ),
       ),
